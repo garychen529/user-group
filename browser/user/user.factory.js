@@ -5,7 +5,7 @@ angular.module('app')
 				return $http.put('/api/users/' + user.id, user);
 			},
 			register: function(credentials) {
-				return $http.post('/api/users', credentials);
+				return $http.post('/api/register', credentials);
 			}
 		}
 	})

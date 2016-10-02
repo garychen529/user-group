@@ -1,7 +1,8 @@
 var router = require('express').Router();
 
 router.get('/', function(req, res, next){
-  res.send('TODO GET');
+  if(!req.session.userId)
+    res.sendStatus(401);
 });
 
 router.delete('/', function(req, res, next){

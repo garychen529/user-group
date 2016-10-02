@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.3"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "DATABASE_URL=postgres://localhost/my_db PORT=3000 SYNC=true nodemon server"
+    "start:dev": "SECRET=true DATABASE_URL=postgres://localhost/my_db PORT=3000 SYNC=true nodemon server"
   },
   "repository": {
     "type": "git",

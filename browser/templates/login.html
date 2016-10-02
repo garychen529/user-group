@@ -3,7 +3,20 @@
     <input class='form-control' ng-model='credentials.username' name='name' placeholder='name' required />
   </div>
   <div class='form-group'>
-    <input type='password' class='form-control' ng-model='credentials.password' required name='password' placeholder='password' />
+    <input type='password' class='form-control' ng-model='credentials.password' name='password' placeholder='password' required/>
   </div>
   <button ng-disabled='form.$invalid' class='btn btn-primary' ng-click='login()'>Login</button>
 </form>
+
+<div class="well">
+Register
+	<form class='well' name='form'>
+	  <div class='form-group'>
+	    <input class='form-control' ng-model='newCredentials.username' name='name' placeholder='name' required />
+	  </div>
+	  <div class='form-group'>
+	    <input type='password' class='form-control' ng-model='newCredentials.password' name='password' placeholder='password' required/>
+	  </div>
+	  <button ng-disabled='form.$invalid' class='btn btn-primary' ng-click='register()'>Login</button>
+	</form>
+</div>

@@ -1,12 +1,10 @@
 'use strict';
 
-var Sequelize = require('sequelize');
-
-var db = require('../../_db');
+var db = require('./_db');
 
 var Group = db.define('group', {
   name: {
-    type: Sequelize.STRING,
+    type: db.Sequelize.STRING,
     allowNull: false,
     unique: true
   }

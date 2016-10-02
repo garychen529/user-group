@@ -1,7 +1,7 @@
 'use strict';
 
 const router = require('express').Router();
-const User = require('./user.model');
+const User = require('../db').models.User;
 
 router.param('id', function (req, res, next, id) {
   User.findById(id)

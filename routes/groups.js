@@ -1,12 +1,14 @@
 'use strict';
 
 const router = require('express').Router();
-const Group = require('./group.model');
+const Group = require('../db').models.Group; 
+
+module.exports = router;
 
 router.get('/', function (req, res, next) {
   Group.findAll()
-  .then(function (users) {
-    res.json(users);
+  .then(function (groups) {
+    res.json(groups);
   })
   .catch(next);
 });

@@ -1,15 +1,17 @@
 'use strict';
 
-var app = require('./app');
-var db = require('./db');
+const app = require('./app');
+const db = require('./db');
 
-var port = 8080;
-var server = app.listen(port, function (err) {
-  if (err) throw err;
+const port = 3000;
+const server = app.listen(port, function (err) {
+  if (err) {
+  	throw err;
+  }
   console.log('HTTP server patiently listening on port', port);
   db.sync()
   .then(function () {
-    console.log('Oh and btw the postgres server is totally connected, too');
+    console.log('Postgres server is connected, too');
   });
 });
 

@@ -9,6 +9,8 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use(express.static(path.join(__dirname, 'browser')));
 
+app.use(require('body-parser').json());
+
 app.use(require('express-session')({ secret: process.env.SECRET }));
 
 

@@ -4,27 +4,14 @@
 	<script src='/angular/angular.js' defer></script>
 	<script src='/angular-ui-router/release/angular-ui-router.js' defer></script>
 	<script src='/browser/app.js' defer></script>
-	<script src='/browser/login/login.controller.js' defer></script>
+	<script src='/browser/navTabs/navTabs.directive.js' defer></script>
 	<script src='/browser/login/login.factory.js' defer></script>
+	<script src='/browser/settings/settings.factory.js' defer></script>
+	<script src='/browser/settings/settings.controller.js' defer></script>
 	<title>User Group Auth</title>
 </head>
 <body ng-app='app'>
-	<div class="container">
-		<ul class='nav nav-tabs'>
-		  <li ui-sref-active='active'>
-		    <a ui-sref='home'>Home</a>
-		  </li>
-		    <li ui-sref-active='active' ng-if='user.id'>
-		      <a ui-sref='settings'>Settings</a>
-		    </li>
-		    <li ng-if='user.id'>
-		        <button ng-click='logout()' class='btn btn-warning'>Logout {{ user.name }} ({{ user.group }})</button>
-		    </li>
-		  <li ui-sref-active='active' ng-if='!user.id'>
-		    <a ui-sref='login'>Login</a>
-		  </li>
-		</ul>
-	</div>
+	<nav-tabs></nav-tabs>
 	<ui-view></ui-view>
 </body>
 </html>

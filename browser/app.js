@@ -8,8 +8,16 @@ angular.module('app', ['ui.router'])
 			.state('login', {
 				url: '/login',
 				templateUrl: 'browser/templates/login.html',
-				controller: 'loginCtrl'
-			}).state('settings', {
+				controller: function($scope, AuthService, $state) {
+					$scope.login = function() {
+						AuthService.login($scope.credentials)
+						.then(function() {
+							$state.go('home');
+						});
+					};			
+				};
+			})
+			.state('settings', {
 				url: '/settings',
 				templateUrl: '/browser/templates/settings',
 				controller: 'settingsCtrl'

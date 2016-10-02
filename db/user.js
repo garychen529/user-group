@@ -1,8 +1,8 @@
 'use strict';
 
-var db = require('./_db');
+const db = require('./_db');
 
-var User = db.define('user', {
+const User = db.define('user', {
   username: {
     type: db.Sequelize.STRING,
     allowNull: false,
@@ -11,7 +11,6 @@ var User = db.define('user', {
   password: {
     type: db.Sequelize.STRING,
     allowNull: false,
-    unique: true
   }
 });
 

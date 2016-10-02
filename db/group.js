@@ -1,8 +1,8 @@
 'use strict';
 
-var db = require('./_db');
+const db = require('./_db');
 
-var Group = db.define('group', {
+const Group = db.define('group', {
   name: {
     type: db.Sequelize.STRING,
     allowNull: false,

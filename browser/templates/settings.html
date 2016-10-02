@@ -1,7 +1,7 @@
 <div class="well">
 	<form>
-		<select ng-change="updateGroup()" ng-model="selectedGroup">
-			<option ng-repeat="group in groups">group.name</option>
+		<select class="form-control" ng-change="updateGroup()" ng-model="selectedGroup">
+			<option value="{{group.id}}" ng-repeat="group in groups">{{group.name}}</option>
 		</select>
 	</form>
 </div>

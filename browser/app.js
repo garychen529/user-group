@@ -21,7 +21,7 @@ angular.module('app', ['ui.router'])
 			})
 			.state('settings', {
 				url: '/settings',
-				templateUrl: '/templates/settings',
+				templateUrl: '/templates/settings.html',
 				controller: 'settingsCtrl'
 			})
 	});

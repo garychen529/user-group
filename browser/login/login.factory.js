@@ -19,7 +19,7 @@ angular.module('app')
 			},
 
 			me: function() {
-				return $http.get('/api/sessions')
+				$http.get('/api/sessions')
 				.then(function(result) {
 					angular.copy(result.data, _user);
 				});
